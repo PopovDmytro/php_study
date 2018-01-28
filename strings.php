@@ -1,4 +1,6 @@
-<a href="/">Home</a>
+<?php
+include 'header.php';
+?>
 
 
 <?php
