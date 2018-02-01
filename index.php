@@ -1,100 +1,98 @@
 <?php
-//echo gettype('word');
-//echo (int) "23";
-//echo +"23";
-?>
-<hr />
-<?php
-//$x = 25;
-//$x = round(pow( sin($x), 2), 5);
-//echo $x;
-?>
-<hr />
-<?php
-//$s = 'loginNames with length more than 10';
-//if($s !== '') {
-//      echo strlen($s) . '<br>', substr($s, 0, 3) . '<br>';
-//}
-//if (strlen($s) > 10) {
-//      $searchCharsArr = ['a', 'g'];
-//      $s = substr($s, 0, 10);
-//      $s = str_replace($searchCharsArr, ' ', $s);
-//      echo $s;
-//}
-?>
-<hr />
-<?php
 
-/*$string = '<div class="refnamediv">
-            <h1>htmlspecialchars</h1>
-            <p>(PHP 4, PHP 5, PHP 7)</p><p class="refpurpose"><span class="refname">htmlspecialchars</span> - <span class="dc-title">Lorem ipsum.</span></p>
-        </div>';
+$number = 10;
 
-echo '<br /> with html = ' . strlen($string);
+switch ($number) {
+    case 100:
+        echo "it is 34";
+        break;
+    case 37:
+        echo "it is 37";
+        break;
+    case 5:
+        echo "it is 5";
+        break;
+    case 10:
+        echo "it is 10";
+        break;
+    case 12:
+        echo "it is 12";
+        break;
+    default:
+        echo $number . " not equal to any of case";
+}
 
-$string = strip_tags($string);
 
-echo '<br /> without html = ' . strlen($string);
-
-echo '<br />';
-
-var_dump($string);*/
-
-/*
- * =====================================
- * TODO XSS and SQL inject what is it ?
- * =====================================
- * */
-
-?>
-
-<?php
-
-$a = 25;
-$b = 70;
-$c = 100;
-
-echo ($a > 20) && ($a < $b) || ($c === 100) ? "Ok" : "not OK" , '<br />';
-
-echo ($a > 26) || ($a == 25) && ($c === 100) && ($b === 70) ? "Ok" : "not OK" ;
-
-/*ARRAY*/
-
-$arr[] = "some text 1";
-$arr[] = "some text 2";
-
-$date = [
-        "day" => 17,
-        "month" => "april",
-        "year" => "2017"
+$items = [
+    [
+        "name" => "first",
+        "email" => "com@com.com"
+    ],
+    [
+        "name" => "lorem 2",
+        "email" => "2com@com.com"
+    ],
+    [
+        "name" => "lorem 3",
+        "email" => "3com@com.com"
+    ]
 ];
 
-$keys = array_keys($date);
-$count = 0;
+foreach ($items as $item) {
+    echo $item['name'] . " and email is " . $item['email'] . '<br>';
+}
 
-foreach ($date as $elem) {
 
-    echo  " $keys[$count] : \" $elem \" <br />";
-    $count++;
+$variable = 10;
+
+function foo_global () {
+
+    global $variable;
+
+    return $variable + 100;
+}
+
+function foo_static () {
+
+    static $itemVar;
+    echo $itemVar;
+    $itemVar++;
 
 }
 
-/* ARRAY FUNCTIONS
+function foo_example ($vat) {
 
-usort();
-is_array();
-implode();
-array_fill();
-array_filter();
-count();
-rsort();
-sort();
-*/
+    var_dump(func_get_args());
+
+    return $vat++;
+}
+
+foo_example(0,1,2,3);
+
+echo '<hr>';
+
+define('FIRST_CONSTANT', 'constant value');
+echo FIRST_CONSTANT;
+
+echo '<hr>';
+
+rand(1, 2);
+ceil(1.7);
+floor(1.7);
+round(1.2501002310, 5);
+//
+strlen("hello world");
+strtoupper("to upper case");
+//
+$arr = [123,1,2,3,4,5,6,7];
+
+var_dump( in_array(7, $arr), max($arr));
+echo '<br>';
+sort($arr);
+var_dump($arr);
 
 
-//var_dump($arr);
 
-define( "NAME_SPACE", "something" );
 
 
 ?>
