@@ -2,6 +2,7 @@
 session_start();
 
 $_SESSION['greeting'] = "Hello Student this is awesome";
+$_SESSION['greeting123'] = "Hello Student this is awesome";
 
 ?>
 
