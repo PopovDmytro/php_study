@@ -1,4 +1,4 @@
-<?php require 'header.php'?>
+<?php require 'header.php' ?>
 
 <script type="text/javascript">
     // sends data to a php file, via GET, and displays the received answer
@@ -27,7 +27,7 @@
 <div id="txt1">A string that will be sent with Ajax to the server and processed with PHP</div>
 <div id="context">Here will be displayed the response from the php script.</div>
 
-<?php require 'footer.php'?>
+<?php require 'footer.php' ?>
 
 
 <?php

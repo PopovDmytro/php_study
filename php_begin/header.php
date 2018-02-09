@@ -62,29 +62,30 @@ $isHome = $currentpage == $homepage or $currentpage == 'index.php' ? true : fals
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/form.php">Form</a>
+                <a class="nav-link" href="/php_begin/OOP_begin/OOP/oop_begin.php">OOP</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/ajax_request.php">AJAX request page</a>
-                    <!-- CRUD create read update                    -->
-                    <a class="dropdown-item" href="/mysql/login.php">Login write data to db</a>
-                    <a class="dropdown-item" href="/mysql/get_data_from_db.php">GET data form db</a>
-                    <a class="dropdown-item" href="/mysql/delete_from_db.php">Delete from db</a>
-                    <a class="dropdown-item" href="/mysql/update_db.php">Update db</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="/php_begin/works_with_files/opening_files.php">Files</a>
             </li>
             <!---->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    TODO list
+                    Exercises
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/practice_mysqli/todo_edit.php">todo edit</a>
-                    <a class="dropdown-item" href="/practice_mysqli/todo_show.php">todo show</a>
+                    <a class="dropdown-item" href="/php_begin/ajax_request.php">AJAX request page</a>
+                    <a class="dropdown-item" href="/php_begin/form.php">Form</a>
+                    <hr>
+                    <!-- CRUD create read update                    -->
+                    <a class="dropdown-item" href="/php_begin/mysqlegin/mysql/login.php">Login write data to db</a>
+                    <a class="dropdown-item" href="/php_begin/mysqlegin/mysql/get_data_from_db.php">GET data form db</a>
+                    <a class="dropdown-item" href="/php_begin/mysqlegin/mysql/delete_from_db.php">Delete from db</a>
+                    <a class="dropdown-item" href="/php_begin/mysqlegin/mysql/update_db.php">Update db</a>
+                    <hr>
+                    <h6>TODO list</h6>
+                    <a class="dropdown-item" href="/php_begin/practice_mysqli/todo_edit.php">todo edit</a>
+                    <a class="dropdown-item" href="/php_begin/practice_mysqli/todo_show.php">todo show</a>
+
                 </div>
             </li>
             <!---->
@@ -93,21 +94,13 @@ $isHome = $currentpage == $homepage or $currentpage == 'index.php' ? true : fals
                     web (get, post, session, cookies)
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/web_with_php/get_superglobal.php">$_GET $_POST</a>
-                    <a class="dropdown-item" href="/web_with_php/cookies.php">cookies</a>
-                    <a class="dropdown-item" href="/web_with_php/session.php">Session</a>
-                    <a class="dropdown-item" href="/web_with_php/session1.php">Session 1</a>
+                    <a class="dropdown-item" href="/php_begin/web_with_php/get_superglobal.php">$_GET $_POST</a>
+                    <a class="dropdown-item" href="/php_begin/web_with_php/cookies.php">cookies</a>
+                    <a class="dropdown-item" href="/php_begin/web_with_php/session.php">Session</a>
+                    <a class="dropdown-item" href="/php_begin/web_with_php/session1.php">Session 1</a>
                 </div>
             </li>
             <!---->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    OOP
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/OOP/oop_begin.php">OOP_begin</a>
-                </div>
-            </li>
         </ul>
 
         <form  class="form-inline">

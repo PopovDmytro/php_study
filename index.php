@@ -1,29 +1,13 @@
-<?php require 'header.php'?>
+<?php
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-center pt-2 pb-2">Home page</h1>
-            <hr />
-        </div>
-    </div>
-</div>
+require 'includes/header.php'
+
+?>
 
 
-<h3>
-    <?php
-        $pass = 1234;
-        $salt = 'asdasvzvzkmfgldfg123sf';
 
-        $hashFormatTest = "$2y$10$";
+<?php
 
-        $crypt_result = crypt($pass, $salt . $hashFormatTest );
+require 'includes/footer.php'
 
-        echo  $crypt_result;
-
-    ?>
-</h3>
-
-</main>
-<footer class="footer text-center">
-<?php require 'footer.php'; ?>
+?>
