@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/**/
+.menu {
+    align-items: center;
+}
+
+.header-logo {
+    max-height: 40px;
+}
+
+/**/
+.media-object {
+    flex-wrap: wrap;
+}
+
+.media-object + .media-object {
+    border-top: 1px solid #cacaca;
+    padding-top: 1rem;
+}
+
+.media-object:last-of-type {
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 1rem;
+}
+
+.media-object .media-object-section {
+    width: 100%;
+}
+
+.media-object img {
+    max-width: 100%;
+}
+/**/
+.card {
+    background-color: #e6e6e6;
+
+}
+
+.card-section {
+    padding: 0.5rem;
+}
