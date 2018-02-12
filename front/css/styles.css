@@ -7,7 +7,10 @@ body {
 main {
     flex-grow: 1;
 }
-
+/**/
+.button.success {
+    color: #fff;
+}
 /**/
 .menu {
     align-items: center;
@@ -42,9 +45,34 @@ main {
 /**/
 .card {
     background-color: #e6e6e6;
-
 }
 
 .card-section {
     padding: 0.5rem;
+}
+/**/
+.search-section {
+    padding-right: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.search-btn {
+    border-radius: 0 3px 3px 0 ;
+    height: 39px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/**/
+.admin-sidebar li:not(.accordion-item) a:before {
+    display: none;
+}
+
+.admin-sidebar li > a {
+    color: #000;
+}
+
+.admin-sidebar li > a i {
+    margin-right: 0.5rem;
 }

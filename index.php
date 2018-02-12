@@ -23,7 +23,7 @@ require 'includes/header.php';
             <div class="cell medium-3">
 
                 <?php
-                    require 'includes/navigation.php';
+                    include 'includes/navigation.php';
                 ?>
             </div>
 

@@ -1,3 +1,6 @@
+<?php ob_start(); ?>
+<?php include_once "../includes/db.php"; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,7 +34,7 @@
 
 </head>
 <body>
-<!--header-->
+
 <header>
     <div class="title-bar stacked-for-medium" data-responsive-toggle="responsive-menu" data-hide-for="large">
         <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
@@ -52,26 +55,21 @@
                         <li><a href="#0">Three</a></li>
                     </ul>
                 </li>-->
-
-                <?php
-
-                $query = "SELECT * FROM categories";
-                $select_all_categories_query = mysqli_query($connection, $query);
-
-                while($row = mysqli_fetch_assoc($select_all_categories_query)) {
-                    $cat_title = $row['cat_title'];
-
-                    echo "<li><a href='#'>{$cat_title}</a></li>";
-                }
-
-                ?>
+                <li><a href='../'>to home</a></li>
+                <li><a href='/admin/index.php'>Admin home</a></li>
+                <li><a href='/admin/categories.php'>Categories</a></li>
             </ul>
         </div>
         <div class="top-bar-right">
-            <!--<ul class="menu">
-                <li><input type="search" placeholder="Search"></li>
-                <li><button type="button" class="button">Search</button></li>
-            </ul>-->
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="has-submenu">
+                    <a href="#0"><i class="far fa-user"></i>One</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="#0">Profile</a></li>
+                        <li><a href="#0">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
