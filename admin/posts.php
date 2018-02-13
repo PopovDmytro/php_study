@@ -1,6 +1,7 @@
 <?php
 require 'includes/admin_head.php';
 
+include 'functions.php';
 include 'posts/posts_functions.php';
 ?>
 <main>
@@ -18,24 +19,24 @@ include 'posts/posts_functions.php';
                         <?php
 
                         if(isset($_GET['source'])) {
-
                             $source = $_GET['source'];
-
-                            switch ($source) {
-
-                                case 'add_post';
-                                    include 'posts/add_post.php';
-                                    break;
-                                default:
-                                    include 'posts/view_all_posts.php';
-                            }
                         } else {
                             $source = '';
                         }
 
+                        switch ($source) {
+
+                            case 'add_post';
+                                include 'posts/add_post.php';
+                                break;
+                            case 'edit_post';
+                                include 'posts/edit_post.php';
+                                break;
+                            default:
+                                include 'posts/view_all_posts.php';
+                        }
+
                         ?>
-
-
 
                     </div>
                 </div>

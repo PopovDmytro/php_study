@@ -27,11 +27,23 @@ function get_all_posts($connection) {
         $tr .= "<td>{$post_tags}</td>";
         $tr .= "<td>{$post_comment_count}</td>";
         $tr .= "<td>{$post_date}</td>";
+        $tr .= "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>edit</a></td>";
+        $tr .= "<td><a href='posts.php?delete={$post_id}'>delete</a></td>";
 //                                        $tr .= "<td><a href='categories.php?delete={}'>Delete</a></td>";
 //                                        $tr .= "<td><a href='categories.php?edit={}'>Edit</a></td>";
         $tr .= "</tr>";
         echo $tr;
     }
+}
+
+//delete post
+if(isset($_GET['delete'])) {
+
+    $the_post_id = $_GET['delete'];
+    $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
+    $delete_query = mysqli_query($connection, $query);
+
+    confirm($delete_query);
 }
 
 ?>

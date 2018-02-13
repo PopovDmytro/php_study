@@ -1,5 +1,11 @@
 <?php
 
+function confirm($result_query) {
+    if(!$result_query) {
+        die("QUERY FAILED" . mysqli_error($result_query) );
+    }
+}
+
 function insert_categories($connection) {
     if(isset($_POST['category_add'])){
 

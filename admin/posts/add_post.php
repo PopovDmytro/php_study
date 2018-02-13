@@ -13,13 +13,26 @@ if(isset($_POST['create_post'])) {
     $post_date = date('d-m-y');
     $post_content = $_POST['post_content'];
 
-    move_uploaded_file($post_image_temp, "$post_image");
+    $check = getimagesize($post_image_temp);
+
+    $is_uploaded_file = move_uploaded_file($post_image_temp,"../media/posts_images/$post_image");
+
+    if(!$is_uploaded_file) {
+        echo $_FILES['post_image']['error'];
+    }
+
+    $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) ";
+    $query .= "VALUES('{$post_category_id}', '{$post_title}', '{$post_author}', now(), '{$post_image}', '{$post_content}', '{$post_tags}', '{$post_comment_count}', '{$post_status}' ) ";
+
+    $post_add_query = mysqli_query($connection, $query);
+
+    confirm($post_add_query);
 
 }
 
 ?>
 
-<form action="" method="post">
+<form enctype="multipart/form-data" action="" method="POST">
     <div class="form-group">
         <label for="post_author">post_author</label>
         <input type="text" name="post_author" class="form-control" id="post_author" placeholder="post_author">
@@ -47,6 +60,7 @@ if(isset($_POST['create_post'])) {
     <div class="form-group">
         <label for="post_content">post_date</label>
         <textarea name="post_content" id="post_content" rows="5">
+            type your content here
         </textarea>
     </div>
 
