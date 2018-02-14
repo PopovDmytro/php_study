@@ -12,7 +12,6 @@
                 <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="x4zej8-accordion-label" aria-hidden="true" id="x4zej8-accordion">
                     <p><a href="posts.php?source=">all posts</a></p>
                     <p><a href="posts.php?source=add_post">add_post</a></p>
-                    <p><a href="posts.php?source=edit_post">edit_post</a></p>
                 </div>
             </li>
             <li>

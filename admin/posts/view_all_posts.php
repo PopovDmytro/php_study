@@ -21,7 +21,19 @@ function get_all_posts($connection) {
         $tr .= "<td>{$post_id}</td>";
         $tr .= "<td>{$post_author}</td>";
         $tr .= "<td>{$post_title}</td>";
-        $tr .= "<td>{$post_category_id}</td>";
+
+        $cat_id = $_GET['edit'];
+        $query = "SELECT * FROM categories WHERE cat_id = {$post_category_id} ";
+        $select_categories_id = mysqli_query($connection, $query);
+
+        while ($row = mysqli_fetch_assoc($select_categories_id)) {
+            $cat_id = $row['cat_id'];
+            $cat_title = $row['cat_title'];
+
+            $tr .= "<td>{$cat_title}</td>";
+        }
+
+
         $tr .= "<td>{$post_status}</td>";
         $tr .= "<td><img src='../media/posts_images/{$post_image}' style='max-width: 100px' alt=''></td>";
         $tr .= "<td>{$post_tags}</td>";

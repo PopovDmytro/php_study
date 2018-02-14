@@ -13,8 +13,6 @@ if(isset($_POST['create_post'])) {
     $post_date = date('d-m-y');
     $post_content = $_POST['post_content'];
 
-    $check = getimagesize($post_image_temp);
-
     $is_uploaded_file = move_uploaded_file($post_image_temp,"../media/posts_images/$post_image");
 
     if(!$is_uploaded_file) {
@@ -43,7 +41,31 @@ if(isset($_POST['create_post'])) {
     </div>
     <div class="form-group">
         <label for="post_category_id">post_category</label>
-        <input type="text" name="post_category_id" class="form-control" id="post_category_id" placeholder="post_category_id">
+        <select name="post_category_id" class="form-control" id="post_category_id">
+
+            <?php
+            //            if(isset($_GET['p_id'])){
+
+            $cat_id = $_GET['p_id'];
+
+            echo $cat_id;
+
+            $query = "SELECT * FROM categories";
+            $select_categories = mysqli_query($connection, $query);
+
+            confirm($select_categories);
+
+            while ($row = mysqli_fetch_assoc($select_categories)) {
+                $cat_id = $row['cat_id'];
+                $cat_title = $row['cat_title'];
+
+                ?>
+                <option value="<?php echo $cat_id; ?>" type="text"><?php echo $cat_title; ?></option>
+                <?php
+            }
+            ?>
+
+        </select>
     </div>
     <div class="form-group">
         <label for="post_status">post_status</label>
@@ -59,9 +81,7 @@ if(isset($_POST['create_post'])) {
     </div>
     <div class="form-group">
         <label for="post_content">post_date</label>
-        <textarea name="post_content" id="post_content" rows="5">
-            type your content here
-        </textarea>
+        <textarea name="post_content" id="post_content" rows="5">type your content here</textarea>
     </div>
 
     <button type="submit" class="button success" name="create_post">Save</button>

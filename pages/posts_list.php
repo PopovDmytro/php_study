@@ -49,7 +49,7 @@ $json_posts = json_encode($posts);
     <?php foreach ($posts as $post): ?>
     <div class="media-object stack-for-small">
         <div class="media-object-section">
-            <h4><?php echo $post['post_title']; ?></h4>
+            <h4><a href="?p_id=<?php echo $post['post_id']; ?>"><?php echo $post['post_title']; ?></a></h4>
             <h5><?php echo $post['post_author']; ?></h5>
             <p class="subheader"><?php echo $post['post_date']; ?></p>
         </div>

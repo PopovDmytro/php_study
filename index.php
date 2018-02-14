@@ -15,7 +15,15 @@ require 'includes/header.php';
             <div class="cell medium-9">
 
                 <?php
-                    include 'pages/posts_list.php'
+
+                if(isset($_GET['p_id'])){
+                    include 'pages/detail_post.php';
+                } elseif(isset($_GET['category'])) {
+                    include 'pages/category.php';
+                } else {
+                    include 'pages/posts_list.php';
+                }
+
                 ?>
 
             </div>

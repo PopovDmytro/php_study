@@ -28,6 +28,12 @@
     <!--custom styles-->
     <link rel="stylesheet" href="../front/css/styles.css">
 
+    <!--  bootstrap  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -42,7 +48,9 @@
         <div class="top-bar-left">
             <ul class="dropdown menu" data-dropdown-menu>
                 <li class="menu-text">
-                    <img class="header-logo" src="../front/images/icons/broccoli.png" alt="My first CMS">
+                    <a href="/index.php">
+                        <img class="header-logo" src="../front/images/icons/broccoli.png" alt="My first CMS">
+                    </a>
                 </li>
                 <!--<li class="has-submenu">
                     <a href="#0">One</a>
@@ -60,8 +68,9 @@
 
                 while($row = mysqli_fetch_assoc($select_all_categories_query)) {
                     $cat_title = $row['cat_title'];
+                    $cat_id = $row['cat_id'];
 
-                    echo "<li><a href='#'>{$cat_title}</a></li>";
+                    echo "<li><a href='?category=$cat_id'>{$cat_title}</a></li>";
                 }
 
                 ?>
