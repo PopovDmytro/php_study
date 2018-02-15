@@ -35,14 +35,13 @@ function get_all_posts($connection) {
 
 
         $tr .= "<td>{$post_status}</td>";
+        $tr .= "<td><a href='?published={$post_id}' style='padding:10px'>&#x1F44D</a><a href='?draft={$post_id}' style='padding:10px'>&#x1F44E</a></td>";
         $tr .= "<td><img src='../media/posts_images/{$post_image}' style='max-width: 100px' alt=''></td>";
         $tr .= "<td>{$post_tags}</td>";
         $tr .= "<td>{$post_comment_count}</td>";
         $tr .= "<td>{$post_date}</td>";
         $tr .= "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>edit</a></td>";
         $tr .= "<td><a href='posts.php?delete={$post_id}'>delete</a></td>";
-//                                        $tr .= "<td><a href='categories.php?delete={}'>Delete</a></td>";
-//                                        $tr .= "<td><a href='categories.php?edit={}'>Edit</a></td>";
         $tr .= "</tr>";
         echo $tr;
     }
@@ -56,6 +55,26 @@ if(isset($_GET['delete'])) {
     $delete_query = mysqli_query($connection, $query);
 
     confirm($delete_query);
+
+    header("Location: posts.php");
+}
+
+if(isset($_GET['draft'])) {
+
+    $the_post_id = $_GET['draft'];
+    $query = "UPDATE posts SET post_status = 'draft' WHERE post_id = {$the_post_id} ";
+    $draft_post_query = mysqli_query($connection, $query);
+
+    confirm($draft_post_query);
+}
+
+if(isset($_GET['published'])) {
+
+    $the_post_id = $_GET['published'];
+    $query = "UPDATE posts SET post_status = 'published' WHERE post_id = {$the_post_id} ";
+    $publish_post_query = mysqli_query($connection, $query);
+
+    confirm($publish_post_query);
 }
 
 ?>
@@ -68,6 +87,7 @@ if(isset($_GET['delete'])) {
         <th>Title</th>
         <th>Category</th>
         <th>Status</th>
+        <th>Publish/Draft</th>
         <th>Image</th>
         <th>Tags</th>
         <th>Comments</th>

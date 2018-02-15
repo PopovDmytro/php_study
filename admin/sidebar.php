@@ -18,7 +18,7 @@
                 <a href="#" class="accordion-title"><i class="fas fa-gavel"></i>Bootstrap grid</a>
             </li>
             <li>
-                <a href="#" class="accordion-title"><i class="far fa-file"></i>Comments</a>
+                <a href="comments.php" class="accordion-title"><i class="far fa-file"></i>Comments</a>
             </li>
             <li class="accordion-item" data-accordion-item="">
                 <a href="#" class="accordion-title" aria-controls="x4zej8-accordion" role="tab" id="x4zej8-accordion-label" aria-expanded="false" aria-selected="false"><i class="fas fa-ellipsis-v"></i>Users</a>
@@ -28,12 +28,6 @@
             </li>
             <li>
                 <a href="#" class="accordion-title"><i class="fas fa-list-alt"></i>Profile</a>
-            </li>
-            <li>
-                <a href="#" class="accordion-title"><i class="fas fa-table"></i>lskdmflsk</a>
-            </li>
-            <li>
-                <a href="#" class="accordion-title"><i class="far fa-chart-bar"></i>lskdmflsk</a>
             </li>
         </ul>
     </div>

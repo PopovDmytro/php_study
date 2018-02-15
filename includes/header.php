@@ -22,17 +22,18 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!--/-->
 
-    <!--foundation-->
-    <link rel="stylesheet" href="../front/css/app.css">
-    <link rel="stylesheet" href="../front/css/foundation.min.css">
-    <!--custom styles-->
-    <link rel="stylesheet" href="../front/css/styles.css">
 
     <!--  bootstrap  -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--foundation-->
+    <link rel="stylesheet" href="../front/css/app.css">
+    <link rel="stylesheet" href="../front/css/foundation.min.css">
+    <!--custom styles-->
+    <link rel="stylesheet" href="../front/css/styles.css">
 
 
 </head>

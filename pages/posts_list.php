@@ -7,7 +7,7 @@
 if(isset($_POST['submit'])){
 
     $search = $_POST['search'];
-    $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
+    $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' AND post_status = 'published' ";
 
     $select_posts_query = mysqli_query($connection, $query);
     if(!$select_posts_query) {
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 
 } else {
 
-    $query = "SELECT * FROM posts";
+    $query = "SELECT * FROM posts WHERE post_status = 'published' ";
     $select_posts_query = mysqli_query($connection, $query);
 
 }
@@ -60,7 +60,7 @@ $json_posts = json_encode($posts);
                 <img src="media/posts_images/<?php echo $post['post_image']; ?>">
             </div>
             <div class="text-left">
-                <p><?php echo $post['post_content']; ?></p>
+                <p><?php echo substr($post['post_content'], 0, 100) . '...'; ?></p>
                 <div class="">
                     <a href="#" class="button">Learn More <i class="fas fa-chevron-right"></i></a>
                 </div>

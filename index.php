@@ -1,6 +1,7 @@
 <?php
 
 require 'includes/db.php';
+include 'admin/functions.php';
 //
 require 'includes/header.php';
 

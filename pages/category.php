@@ -5,7 +5,7 @@
 
         $post_category = $_GET['category'];
 
-        $query = "SELECT * FROM posts WHERE post_category_id = $post_category";
+        $query = "SELECT * FROM posts WHERE post_category_id = $post_category AND post_status = 'published'";
         $select_all_posts_query = mysqli_query($connection, $query);
 
     }
@@ -40,7 +40,7 @@
 
         <img class="img-responsive" src="media/posts_images/<?php echo $post_image;?>" alt="">
         <hr>
-        <p><?php echo $post_content ?></p>
+        <p><?php echo substr($post_content, 0 , 100 )?></p>
         <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
         <hr>
