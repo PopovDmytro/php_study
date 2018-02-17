@@ -15,15 +15,13 @@
                 </div>
             </li>
             <li>
-                <a href="#" class="accordion-title"><i class="fas fa-gavel"></i>Bootstrap grid</a>
-            </li>
-            <li>
                 <a href="comments.php" class="accordion-title"><i class="far fa-file"></i>Comments</a>
             </li>
             <li class="accordion-item" data-accordion-item="">
                 <a href="#" class="accordion-title" aria-controls="x4zej8-accordion" role="tab" id="x4zej8-accordion-label" aria-expanded="false" aria-selected="false"><i class="fas fa-ellipsis-v"></i>Users</a>
                 <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="x4zej8-accordion-label" aria-hidden="true" id="x4zej8-accordion">
-                    Panel 3. Lorem ipsum dolor
+                    <p><a href="users.php">all users</a></p>
+                    <p><a href="users.php?source=add_user">add_user</a></p>
                 </div>
             </li>
             <li>
