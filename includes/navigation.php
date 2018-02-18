@@ -1,5 +1,34 @@
 <!--navigation-->
 <div class="side-bar margin-top-1">
+
+
+<!--    Login   -->
+    <div class="card">
+        <div class="card-section">
+            <h5>Search</h5>
+        </div>
+        <div class="card-section">
+            <ul class="menu" >
+                <li class="search-section">
+                    <form action="includes/login.php" method="post">
+                        <label for="">
+                            Username
+                            <input type="text" name="username" placeholder="Username">
+                        </label>
+                        <label for="">
+                            Password
+                            <input type="password" name="password" placeholder="Password">
+                        </label>
+                        <div class="margin-top-1">
+                            <button type="submit" name="login" class="button">Log in</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
 <!--search section-->
     <div class="card">
         <div class="card-section">

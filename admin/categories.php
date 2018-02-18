@@ -1,7 +1,5 @@
 <?php
 require 'includes/admin_head.php';
-
-include 'functions.php';
 ?>
 <main>
     <div class="grid-container">

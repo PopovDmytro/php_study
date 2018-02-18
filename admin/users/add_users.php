@@ -29,6 +29,9 @@ if(isset($_POST['create_user'])) {
 
     confirm($user_add_query);
 
+    echo "User created <a href='users.php'>View all users</a>";
+
+//    header("Location: /admin/users.php?source=add_user");
 }
 
 ?>

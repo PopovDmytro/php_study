@@ -41,7 +41,6 @@ require 'includes/header.php';
 
 </main>
 
-
 <?php
 
 require 'includes/footer.php';

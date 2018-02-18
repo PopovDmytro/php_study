@@ -1,7 +1,6 @@
 <?php
 require 'includes/admin_head.php';
 
-include 'functions.php';
 include 'posts/posts_functions.php';
 ?>
 <main>

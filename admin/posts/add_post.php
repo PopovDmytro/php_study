@@ -26,6 +26,7 @@ if(isset($_POST['create_post'])) {
 
     confirm($post_add_query);
 
+    echo "post was added  <a href='posts.php?source='>view all posts</a>";
 }
 
 ?>

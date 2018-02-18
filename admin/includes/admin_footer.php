@@ -8,7 +8,17 @@
 <script src="../front/js/vendor/jquery.js"></script>
 <script src="../front/js/vendor/foundation.js"></script>
 <script src="../front/js/vendor/what-input.js"></script>
+
 <script src="../front/js/app.js"></script>
+
+<!--bootstrap js-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--    -->
+
+<!--    wysiwyg js-->
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
 
 </body>
 </html>

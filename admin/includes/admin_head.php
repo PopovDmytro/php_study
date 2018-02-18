@@ -1,5 +1,15 @@
 <?php ob_start(); ?>
+<?php session_start(); ?>
+
 <?php include_once "../includes/db.php"; ?>
+<?php include 'functions.php'; ?>
+
+<?php
+    if(!isset($_SESSION['user_role'])) {
+        header("Location: ../index.php");
+    }
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -25,12 +35,16 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!--/-->
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
     <!--foundation-->
     <link rel="stylesheet" href="../front/css/app.css">
     <link rel="stylesheet" href="../front/css/foundation.min.css">
     <!--custom styles-->
     <link rel="stylesheet" href="../front/css/styles.css">
-
 
 </head>
 <body>
@@ -63,10 +77,15 @@
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
                 <li class="has-submenu">
-                    <a href="#0"><i class="far fa-user"></i>One</a>
+                    <a href="#0"><i class="far fa-user"></i> <?php echo $_SESSION['username'];?> </a>
                     <ul class="submenu menu vertical" data-submenu>
-                        <li><a href="#0">Profile</a></li>
-                        <li><a href="#0">Log Out</a></li>
+                        <li><a href="index.php?profile">Profile</a></li>
+
+                        <?php
+
+                        echo "<li><a href='logout.php'>Log Out</a></li>";
+
+                        ?>
                     </ul>
                 </li>
             </ul>

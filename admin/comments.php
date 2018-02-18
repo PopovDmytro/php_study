@@ -1,8 +1,5 @@
 <?php
 require 'includes/admin_head.php';
-
-include 'functions.php';
-include 'posts/posts_functions.php';
 ?>
 <main>
     <div class="grid-container">
@@ -11,7 +8,7 @@ include 'posts/posts_functions.php';
             <?php require 'sidebar.php'; ?>
 
             <div class="cell small-9 padding-top-1" id="main-content">
-                <h1>Posts</h1>
+                <h1>Comments</h1>
                 <hr>
                 <div class="grid-x grid-padding-x">
                     <div class="cell small-12">

@@ -57,12 +57,14 @@ $json_posts = json_encode($posts);
         <div class="media-object-section img-section text-center">
             <hr class="margin-bottom-1">
             <div class="thumbnail">
-                <img src="media/posts_images/<?php echo $post['post_image']; ?>">
+                <a href="?p_id=<?php echo $post['post_id']; ?>">
+                    <img src="media/posts_images/<?php echo $post['post_image']; ?>">
+                </a>
             </div>
             <div class="text-left">
                 <p><?php echo substr($post['post_content'], 0, 100) . '...'; ?></p>
                 <div class="">
-                    <a href="#" class="button">Learn More <i class="fas fa-chevron-right"></i></a>
+                    <a href="?p_id=<?php echo $post['post_id']; ?>" class="button">Learn More <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>

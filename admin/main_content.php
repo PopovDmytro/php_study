@@ -1,5 +1,181 @@
 <div class="cell small-9" id="main-content">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est excepturi nesciunt porro praesentium quibusdam tempore, ut voluptates? Ea, molestiae, temporibus? Adipisci dignissimos eligendi eos et ipsa nam quibusdam quisquam vero voluptatum. Architecto consectetur deserunt distinctio facilis quod sint sit. Aliquid distinctio eligendi eos rerum totam, ut veritatis. A alias culpa, cum cumque doloremque eaque earum eos fugit in ipsam molestias nam nesciunt nostrum numquam odio perspiciatis quaerat quis ratione rem rerum similique soluta voluptates voluptatum! Atque earum fugiat incidunt maiores minima natus omnis quis. Dolorem excepturi harum id impedit nobis quas quod sint voluptatem? Blanditiis consequuntur cum cumque deleniti dolores eaque eveniet harum in iure laboriosam laudantium libero, maiores mollitia odio placeat porro qui quia recusandae reprehenderit sapiente sed sint, sunt ullam velit vero. Aperiam atque blanditiis cumque cupiditate dignissimos dolores eaque est illum inventore itaque iure iusto maxime neque nobis, numquam odit optio quae quaerat quos repudiandae saepe sed soluta sunt, tempora tempore temporibus tenetur vel. A accusantium aliquid asperiores at earum est facilis fuga fugit incidunt inventore ipsa, laboriosam libero maxime minima modi molestias neque, nisi odio officiis omnis optio perspiciatis possimus praesentium quam quibusdam repellat reprehenderit sequi tempore unde vel? Architecto deserunt expedita in nobis voluptatum. Ab, aliquid autem, blanditiis commodi dolor error explicabo fuga illum magnam magni natus nulla omnis quaerat sapiente voluptatibus. A asperiores beatae eaque et facilis illo iste molestiae non nulla odit perspiciatis rem repellendus, sapiente voluptas voluptatibus? At, ea libero. Beatae eveniet laboriosam odio sequi. Asperiores at labore libero? Accusamus animi architecto, deleniti ipsa quas unde? A ab adipisci aliquid amet aspernatur autem cum delectus deserunt eaque eveniet facilis, fuga fugiat illum laboriosam libero magnam molestiae mollitia nemo obcaecati praesentium provident quas qui quia quis reiciendis repellendus repudiandae rerum similique soluta temporibus totam velit veritatis voluptatum? Aspernatur atque autem distinctio earum eos excepturi inventore laborum magni minus molestias mollitia neque nihil nobis, officiis omnis quaerat quia quis quo quod recusandae repellendus repudiandae tenetur voluptatibus! Ducimus sapiente, vel? Animi aperiam at autem in placeat quia ratione, recusandae repellat vitae? Accusantium aliquam amet architecto aut beatae deleniti deserunt dolorem dolores eos est fugit hic id inventore iste itaque labore maiores, molestiae molestias optio praesentium quae quam quibusdam quo quod sed soluta vitae, voluptatibus! Accusamus amet blanditiis ducimus non odio officia qui quidem rerum veritatis. Aliquam aliquid autem commodi corporis dicta eligendi fuga fugiat harum hic ipsa, itaque molestiae officiis omnis placeat quae quo quod quos reprehenderit sunt suscipit veniam voluptate voluptatibus. Assumenda dolores et hic laborum odio! Ad consectetur deleniti dolor dolore dolorum eaque iusto molestiae mollitia, nihil nisi, omnis pariatur placeat quasi quis temporibus! Accusantium aliquam dignissimos eos unde! Ab explicabo laboriosam, minima numquam omnis quas quidem rem sed sunt voluptatibus? Alias atque autem commodi consequatur delectus deserunt dolores, esse exercitationem in iste, libero magnam maiores molestiae nobis non officia quaerat quas, recusandae reprehenderit sed soluta sunt totam ullam voluptates voluptatum. Consequuntur illo ipsum iste molestias natus nihil odio, sunt totam. Dignissimos dolore eius ex, fugit nesciunt quisquam ratione reiciendis ut. Impedit.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore est excepturi nesciunt porro praesentium quibusdam tempore, ut voluptates? Ea, molestiae, temporibus? Adipisci dignissimos eligendi eos et ipsa nam quibusdam quisquam vero voluptatum. Architecto consectetur deserunt distinctio facilis quod sint sit. Aliquid distinctio eligendi eos rerum totam, ut veritatis. A alias culpa, cum cumque doloremque eaque earum eos fugit in ipsam molestias nam nesciunt nostrum numquam odio perspiciatis quaerat quis ratione rem rerum similique soluta voluptates voluptatum! Atque earum fugiat incidunt maiores minima natus omnis quis. Dolorem excepturi harum id impedit nobis quas quod sint voluptatem? Blanditiis consequuntur cum cumque deleniti dolores eaque eveniet harum in iure laboriosam laudantium libero, maiores mollitia odio placeat porro qui quia recusandae reprehenderit sapiente sed sint, sunt ullam velit vero. Aperiam atque blanditiis cumque cupiditate dignissimos dolores eaque est illum inventore itaque iure iusto maxime neque nobis, numquam odit optio quae quaerat quos repudiandae saepe sed soluta sunt, tempora tempore temporibus tenetur vel. A accusantium aliquid asperiores at earum est facilis fuga fugit incidunt inventore ipsa, laboriosam libero maxime minima modi molestias neque, nisi odio officiis omnis optio perspiciatis possimus praesentium quam quibusdam repellat reprehenderit sequi tempore unde vel? Architecto deserunt expedita in nobis voluptatum. Ab, aliquid autem, blanditiis commodi dolor error explicabo fuga illum magnam magni natus nulla omnis quaerat sapiente voluptatibus. A asperiores beatae eaque et facilis illo iste molestiae non nulla odit perspiciatis rem repellendus, sapiente voluptas voluptatibus? At, ea libero. Beatae eveniet laboriosam odio sequi. Asperiores at labore libero? Accusamus animi architecto, deleniti ipsa quas unde? A ab adipisci aliquid amet aspernatur autem cum delectus deserunt eaque eveniet facilis, fuga fugiat illum laboriosam libero magnam molestiae mollitia nemo obcaecati praesentium provident quas qui quia quis reiciendis repellendus repudiandae rerum similique soluta temporibus totam velit veritatis voluptatum? Aspernatur atque autem distinctio earum eos excepturi inventore laborum magni minus molestias mollitia neque nihil nobis, officiis omnis quaerat quia quis quo quod recusandae repellendus repudiandae tenetur voluptatibus! Ducimus sapiente, vel? Animi aperiam at autem in placeat quia ratione, recusandae repellat vitae? Accusantium aliquam amet architecto aut beatae deleniti deserunt dolorem dolores eos est fugit hic id inventore iste itaque labore maiores, molestiae molestias optio praesentium quae quam quibusdam quo quod sed soluta vitae, voluptatibus! Accusamus amet blanditiis ducimus non odio officia qui quidem rerum veritatis. Aliquam aliquid autem commodi corporis dicta eligendi fuga fugiat harum hic ipsa, itaque molestiae officiis omnis placeat quae quo quod quos reprehenderit sunt suscipit veniam voluptate voluptatibus. Assumenda dolores et hic laborum odio! Ad consectetur deleniti dolor dolore dolorum eaque iusto molestiae mollitia, nihil nisi, omnis pariatur placeat quasi quis temporibus! Accusantium aliquam dignissimos eos unde! Ab explicabo laboriosam, minima numquam omnis quas quidem rem sed sunt voluptatibus? Alias atque autem commodi consequatur delectus deserunt dolores, esse exercitationem in iste, libero magnam maiores molestiae nobis non officia quaerat quas, recusandae reprehenderit sed soluta sunt totam ullam voluptates voluptatum. Consequuntur illo ipsum iste molestias natus nihil odio, sunt totam. Dignissimos dolore eius ex, fugit nesciunt quisquam ratione reiciendis ut. Impedit.
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-file-text fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+
+                            <?php
+                                $query = "SELECT * FROM posts";
+                                $select_all_posts = mysqli_query($connection, $query);
+
+                                $posts_counts = mysqli_num_rows($select_all_posts);
+                            ?>
+
+                            <div class='huge'><?php echo $posts_counts;?></div>
+                            <div>Posts</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="posts.php?source">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <?php
+                            $query = "SELECT * FROM comments";
+                            $select_all_comments = mysqli_query($connection, $query);
+
+                            $comments_counts = mysqli_num_rows($select_all_comments);
+                            ?>
+
+                            <div class='huge'><?php echo $comments_counts;?></div>
+                            <div class="">Comments</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="comments.php">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <?php
+                            $query = "SELECT * FROM users";
+                            $select_all_users = mysqli_query($connection, $query);
+
+                            $users_counts = mysqli_num_rows($select_all_users);
+                            ?>
+
+                            <div class='huge'><?php echo $users_counts;?></div>
+                            <div> Users</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="users.php">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-list fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <?php
+                            $query = "SELECT * FROM categories";
+                            $select_all_cat = mysqli_query($connection, $query);
+
+                            $categories_counts = mysqli_num_rows($select_all_cat);
+                            ?>
+
+                            <div class='huge'><?php echo $categories_counts;?></div>
+                            <div>Categories</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="categories.php">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+
+        <?php
+        $query = "SELECT * FROM posts WHERE post_status = 'draft'";
+        $select_all_draft_posts = mysqli_query($connection, $query);
+        $posts_draft_counts = mysqli_num_rows($select_all_draft_posts);
+
+        $query = "SELECT * FROM posts WHERE post_status = 'published'";
+        $select_all_published_posts = mysqli_query($connection, $query);
+        $posts_published_counts = mysqli_num_rows($select_all_published_posts);
+
+        $query = "SELECT * FROM comments WHERE comment_status = 'unapproved'";
+        $select_all_un_comments = mysqli_query($connection, $query);
+        $un_comments_counts = mysqli_num_rows($select_all_un_comments);
+
+        $query = "SELECT * FROM users WHERE user_role = 'subscriber'";
+        $select_all_subscribers = mysqli_query($connection, $query);
+        $subscribers_counts = mysqli_num_rows($select_all_subscribers);
+
+        ?>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages':['bar']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Data', 'Count'],
+
+                    <?php
+                        $element_text = ['All Posts', 'Published posts','Draft Posts', 'Comments', 'Unapproved comments', 'Users', 'Subscribers', 'Categories'];
+                        $element_count = [$posts_counts, $posts_published_counts, $posts_draft_counts, $comments_counts, $un_comments_counts, $users_counts, $subscribers_counts, $categories_counts];
+
+                        for ($i = 0; $i < count($element_text); $i++) {
+                            echo "['$element_text[$i]', $element_count[$i]],";
+                        }
+                    ?>
+                ]);
+
+                var options = {
+                    chart: {
+                        title: '',
+                        subtitle: ''
+                    }
+                };
+
+                var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+                chart.draw(data, google.charts.Bar.convertOptions(options));
+            }
+        </script>
+
+
+    </div>
+    <div id="columnchart_material" style="width: 100%; height: 500px;"></div>
+
 </div>
 <?php ?>

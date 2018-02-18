@@ -73,11 +73,7 @@ if(isset($_GET['p_id'])){
         <select name="post_category_id" class="form-control" id="post_category_id">
 
             <?php
-//            if(isset($_GET['p_id'])){
-
                 $cat_id = $_GET['p_id'];
-
-                echo $cat_id;
 
                 $query = "SELECT * FROM categories";
                 $select_categories = mysqli_query($connection, $query);
@@ -91,7 +87,7 @@ if(isset($_GET['p_id'])){
                     ?>
                     <option value="<?php echo $cat_id; ?>" <?php if($cat_id === $post_category_id){echo "selected";} ?> type="text"><?php echo $cat_title; ?></option>
                 <?php
-            }
+                }
             ?>
 
         </select>
@@ -99,7 +95,20 @@ if(isset($_GET['p_id'])){
     </div>
     <div class="form-group">
         <label for="post_status">post_status</label>
-        <input value="<?php echo $post_status; ?>" type="text" name="post_status" class="form-control" id="post_status" placeholder="post_status">
+        <select name="post_status" id="post_status">
+            <option value="<?php echo $post_status; ?>"><?php echo $post_status; ?></option>
+
+            <?php
+            if ($post_status === 'published') {
+                echo "<option value='draft'>draft</option>";
+            } else {
+                echo "<option value='published'>published</option>";
+            }
+
+            ?>
+
+        </select>
+
     </div>
     <div class="form-group">
         <img width="80" src="../media/posts_images/<?php echo $post_image_old;?>" alt="">

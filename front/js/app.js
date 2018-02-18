@@ -1,1 +1,1 @@
-$(document).foundation()
+// tinymce.init({ selector:'textarea' });
