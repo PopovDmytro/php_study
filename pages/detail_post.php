@@ -7,6 +7,16 @@ if (isset($_GET['p_id'])) {
 
     $the_post_id = $_GET['p_id'];
 
+    $query = "UPDATE posts SET post_views_count = post_views_count + 1 WHERE post_id = $the_post_id ";
+    $send_query = mysqli_query($connection, $query);
+
+//    echo $_SERVER['SERVER_ADDR']; //getting ip address of  visitor
+
+    if(!$send_query) {
+        die("QUERY FAIL" . mysqli_error($connection));
+    }
+
+
     $query = "SELECT * FROM posts WHERE post_id = $the_post_id ";
     $select_posts = mysqli_query($connection, $query);
 
@@ -43,7 +53,10 @@ if (isset($_GET['p_id'])) {
 
         <?php
     }
+} else {
+    header("Location: index.php");
 }
+
 ?>
 
 <hr>
@@ -53,24 +66,29 @@ if (isset($_GET['p_id'])) {
 
     <?php
     if(isset($_POST['create_comment'])) {
+
+
         $the_post_id = $_GET['p_id'];
 
         $comment_author = $_POST['comment_author'];
         $comment_email = $_POST['comment_email'];
         $comment_content = $_POST['comment_content'];
 
-        $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
-        $query .= "VALUES('{$the_post_id}', '{$comment_author}', '{$comment_email}', '{$comment_content}', 'unapproved', now()) ";
+        if(!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
+            $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status, comment_date) ";
+            $query .= "VALUES('{$the_post_id}', '{$comment_author}', '{$comment_email}', '{$comment_content}', 'unapproved', now()) ";
 
-        $comment_add_query = mysqli_query($connection, $query);
+            $comment_add_query = mysqli_query($connection, $query);
 
-        confirm($comment_add_query);
+            confirm($comment_add_query);
 
-        $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
-        $query .= "WHERE post_id = $the_post_id ";
+            $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
+            $query .= "WHERE post_id = $the_post_id ";
 
-        $update_comment_count = mysqli_query($connection, $query);
-
+            $update_comment_count = mysqli_query($connection, $query);
+        } else {
+            echo "<script>alert('you should fill all inputs !!!')</script>";
+        }
     }
     ?>
 
@@ -78,13 +96,13 @@ if (isset($_GET['p_id'])) {
     <form action="" method="post" role="form">
 
         <div class="form-group">
-            <label for="Author">Author</label>
-            <input type="text" name="comment_author" class="form-control">
+            <label for="author">Author</label>
+            <input type="text" name="comment_author" class="form-control" id="author" required>
         </div>
 
         <div class="form-group">
-            <label for="Author">Email</label>
-            <input type="email" name="comment_email" class="form-control">
+            <label for="email">Email</label>
+            <input type="email" name="comment_email" class="form-control" id="email" required>
         </div>
 
         <div class="form-group">

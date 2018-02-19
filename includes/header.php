@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -82,6 +83,22 @@
                 <li><input type="search" placeholder="Search"></li>
                 <li><button type="button" class="button">Search</button></li>
             </ul>-->
+
+            <?php
+
+                if(isset($_SESSION['user_role'])) {
+
+                    echo "<a href='admin/logout.php'>Log Out</a>";
+
+                    if(isset($_GET['p_id'])) {
+                        echo "<a href='admin/posts.php?source=edit_post&p_id={$_GET['p_id']}'>edit post</a>";
+                    }
+
+                } else {
+                    echo "<a href='?registration'>registration</a>";
+                }
+            ?>
+
         </div>
     </div>
 </header>

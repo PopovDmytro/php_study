@@ -3,9 +3,10 @@
 
 
 <!--    Login   -->
+    <?php if(!isset($_GET['registration'])): ?>
     <div class="card">
         <div class="card-section">
-            <h5>Search</h5>
+            <h5>Log in</h5>
         </div>
         <div class="card-section">
             <ul class="menu" >
@@ -27,6 +28,7 @@
             </ul>
         </div>
     </div>
+    <?php endif; ?>
 
 
 <!--search section-->

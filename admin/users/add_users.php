@@ -4,7 +4,6 @@
 
 if(isset($_POST['create_user'])) {
 
-
     $username = $_POST['username'];
 
     $user_image = $_FILES['user_image']['name'];
@@ -14,7 +13,14 @@ if(isset($_POST['create_user'])) {
     $user_lastname = $_POST['user_lastname'];
     $user_role = $_POST['user_role'];
     $user_email = $_POST['user_email'];
+
     $user_password = $_POST['user_password'];
+    $query = "SELECT randSalt FROM users";
+    $select_randsalt_query = mysqli_query($connection, $query);
+    confirm($select_randsalt_query);
+    $row = mysqli_fetch_array($select_randsalt_query);
+    $salt = $row['randSalt'];
+    $user_password = crypt($user_password, $salt);
 
     $is_uploaded_file = move_uploaded_file($user_image_temp,"../media/posts_images/$user_image");
 

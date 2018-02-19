@@ -46,6 +46,8 @@
     <!--custom styles-->
     <link rel="stylesheet" href="../front/css/styles.css">
 
+    <link rel="stylesheet" href="../media/loader/loader.css">
+
 </head>
 <body>
 
@@ -93,6 +95,4 @@
     </div>
 </header>
 <!--end header-->
-
-
 <?php ?>

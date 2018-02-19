@@ -32,6 +32,13 @@ if (isset($_GET['edit_user'])) {
             $user_email = $_POST['user_email'];
             $user_password = $_POST['user_password'];
 
+            $query = "SELECT randSalt FROM users ";
+            $select_randsalt_query = mysqli_query($connection, $query);
+            confirm($select_randsalt_query);
+            $row = mysqli_fetch_array($select_randsalt_query);
+            $salt = $row['randSalt'];
+            $crypt_user_password = crypt($user_password, $salt);
+
             $is_uploaded_file = move_uploaded_file($user_image_temp,"../media/posts_images/$user_image");
 
             if(!$is_uploaded_file) {
@@ -41,7 +48,7 @@ if (isset($_GET['edit_user'])) {
             }
 
             $query = "UPDATE users SET ";
-            $query .= "user_password = '{$user_password}', ";
+            $query .= "user_password = '{$crypt_user_password}', ";
             $query .= "user_firstname = '{$user_firstname}', ";
             $query .= "user_lastname = '{$user_lastname}', ";
             $query .= "user_email = '{$user_email}', ";
@@ -84,9 +91,9 @@ if (isset($_GET['edit_user'])) {
             <?php
 
                 if($user_role == "admin" ) {
-                    echo "<option value=\"subscriber\" type=\"text\">subscriber</option>";
+                    echo "<option value='subscriber'>subscriber</option>";
                 } elseif ($user_role == "subscriber" ) {
-                    echo "<option value=\"admin\" type=\"text\">admin</option>";
+                    echo "<option value='admin' >admin</option>";
                 }
 
             ?>
@@ -98,8 +105,8 @@ if (isset($_GET['edit_user'])) {
         <input value="<?php echo $user_email; ?>" type="email" name="user_email" class="form-control" id="user_email" placeholder="user_email">
     </div>
     <div class="form-group">
-        <label for="user_password">password</label>
-        <input value="<?php echo$user_password;  ?>" type="password" name="user_password" class="form-control" id="user_password" placeholder="user_password">
+        <!--<label for="user_password">password</label>
+        <input value="<?php /*echo$user_password;  */?>" type="password" name="user_password" class="form-control" id="user_password" placeholder="user_password">-->
     </div>
 
     <button type="submit" class="button success" name="edit_user">Save</button>

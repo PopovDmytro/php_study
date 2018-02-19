@@ -21,10 +21,11 @@ require 'includes/header.php';
                     include 'pages/detail_post.php';
                 } elseif(isset($_GET['category'])) {
                     include 'pages/category.php';
+                } elseif(isset($_GET['registration'])) {
+                    include 'includes/registration.php';
                 } else {
                     include 'pages/posts_list.php';
                 }
-
                 ?>
 
             </div>
