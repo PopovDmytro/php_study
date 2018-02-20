@@ -14,7 +14,6 @@ function get_all_comments($connection) {
         $comment_date = $row['comment_date'];
 
 
-
         $tr = "<tr>";
         $tr .= "<td>{$comment_id}</td>";
 
@@ -41,6 +40,50 @@ function get_all_comments($connection) {
 //        <a href='?source={$comment_id}' style='color:#2a92a5;padding:10px'>✎</a>
     }
 }
+
+
+    function get_all_comments_realated_to_post($connection, $post_id) {
+
+        $query = "SELECT * FROM comments WHERE comment_post_id = " . mysqli_real_escape_string($connection, $post_id);
+        $select_posts = mysqli_query($connection, $query);
+
+        while($row = mysqli_fetch_assoc($select_posts)) {
+            $comment_id = $row['comment_id'];
+            $comment_post_id = $row['comment_post_id'];
+            $comment_author = $row['comment_author'];
+            $comment_email = $row['comment_email'];
+            $comment_content = $row['comment_content'];
+            $comment_status = $row['comment_status'];
+            $comment_date = $row['comment_date'];
+
+
+            $tr = "<tr>";
+            $tr .= "<td>{$comment_id}</td>";
+
+            $query = "select * FROM posts WHERE post_id = $comment_post_id ";
+            $select_post_id_query = mysqli_query($connection, $query);
+
+            while($row = mysqli_fetch_assoc($select_post_id_query)){
+                $post_id = $row['post_id'];
+                $post_title = $row['post_title'];
+
+                $tr .= "<td><a href='../?p_id={$post_id}'>{$post_title}</a></td>";
+            }
+
+            $tr .= "<td>{$comment_author}</td>";
+            $tr .= "<td>{$comment_content}</td>";
+            $tr .= "<td>{$comment_email}</td>";
+            $tr .= "<td>{$comment_status}</td>";
+            $tr .= "<td>{$comment_date}</td>";
+            $tr .= "<td><a href='?approved={$comment_id}' style='padding:10px'>&#x1F44D</a><a href='?unapproved={$comment_id}' style='padding:10px'>&#x1F44E</a></td>";
+            $tr .= "<td><a href='?delete={$comment_id}' style='color:red;padding:10px' >✕</a></td>";
+            $tr .= "</tr>";
+            echo $tr;
+
+//        <a href='?source={$comment_id}' style='color:#2a92a5;padding:10px'>✎</a>
+        }
+    }
+
 
 //delete post
 if(isset($_GET['delete'])) {
@@ -88,7 +131,16 @@ if(isset($_GET['approved'])) {
     </thead>
     <tbody>
 
-    <?php get_all_comments($connection); ?>
+    <?php
+
+    if(isset($_GET['comment_post_id'])) {
+        get_all_comments_realated_to_post($connection, $_GET['comment_post_id']);
+    } else {
+        get_all_comments($connection);
+    }
+
+
+    ?>
 
     </tbody>
 </table>

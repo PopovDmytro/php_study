@@ -15,7 +15,7 @@
 <!--                </div>-->
             </li>
             <li>
-                <a href="comments.php" class="accordion-title"><i class="far fa-file"></i>Comments</a>
+                <a href="comments.php" class="accordion-title"><i class="far fa-file"></i>All Comments</a>
             </li>
             <li class="accordion-item" data-accordion-item="">
                 <a href="#" class="accordion-title" aria-controls="x4zej8-accordion" role="tab" id="x4zej8-accordion-label" aria-expanded="false" aria-selected="false"><i class="fas fa-ellipsis-v"></i>Users</a>

@@ -23,6 +23,8 @@ require 'includes/header.php';
                     include 'pages/category.php';
                 } elseif(isset($_GET['registration'])) {
                     include 'includes/registration.php';
+                } elseif(isset($_GET['contact'])) {
+                    include 'includes/contact.php';
                 } else {
                     include 'pages/posts_list.php';
                 }

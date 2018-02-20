@@ -76,3 +76,8 @@ main {
 .admin-sidebar li > a i {
     margin-right: 0.5rem;
 }
+/**/
+.pagination li.active a {
+    background-color: green;
+    color: white;
+}

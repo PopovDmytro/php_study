@@ -98,7 +98,9 @@
                     echo "<a href='?registration'>registration</a>";
                 }
             ?>
-
+            <div class="">
+                <a href='?contact'>contact</a>
+            </div>
         </div>
     </div>
 </header>

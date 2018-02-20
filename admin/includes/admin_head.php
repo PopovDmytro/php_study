@@ -78,6 +78,9 @@
         </div>
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
+                <li>
+                    users online : <span id="users-online"></span>
+                </li>
                 <li class="has-submenu">
                     <a href="#0"><i class="far fa-user"></i> <?php echo $_SESSION['username'];?> </a>
                     <ul class="submenu menu vertical" data-submenu>

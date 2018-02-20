@@ -34,7 +34,25 @@ if(isset($_POST['create_post'])) {
 <form enctype="multipart/form-data" action="" method="POST">
     <div class="form-group">
         <label for="post_author">post_author</label>
-        <input type="text" name="post_author" class="form-control" id="post_author" placeholder="post_author">
+        <select name="post_author" class="form-control" id="post_author">
+
+            <?php
+            $query = "SELECT * FROM users";
+            $select_users = mysqli_query($connection, $query);
+
+            confirm($select_users);
+
+            while ($row = mysqli_fetch_assoc($select_users)) {
+                $user_id = $row['user_id'];
+                $user_username = $row['username'];
+
+                ?>
+                <option value="<?php echo $user_id; ?>" type="text"><?php echo $user_username; ?></option>
+                <?php
+            }
+            ?>
+
+        </select>
     </div>
     <div class="form-group">
         <label for="post_title">post_title</label>

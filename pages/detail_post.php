@@ -82,10 +82,10 @@ if (isset($_GET['p_id'])) {
 
             confirm($comment_add_query);
 
-            $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
-            $query .= "WHERE post_id = $the_post_id ";
+//            $query = "UPDATE posts SET post_comment_count = post_comment_count + 1 ";
+//            $query .= "WHERE post_id = $the_post_id ";
 
-            $update_comment_count = mysqli_query($connection, $query);
+//            $update_comment_count = mysqli_query($connection, $query);
         } else {
             echo "<script>alert('you should fill all inputs !!!')</script>";
         }

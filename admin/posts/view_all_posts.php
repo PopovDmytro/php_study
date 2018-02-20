@@ -1,7 +1,7 @@
 <?php
 
 function get_all_posts($connection) {
-    $query = "SELECT * FROM posts ORDER BY post_id DESC ";
+    $query = "SELECT * FROM posts ORDER BY post_id ASC ";
     $select_posts = mysqli_query($connection, $query);
 
     $checkboxArr = [];
@@ -40,7 +40,19 @@ function get_all_posts($connection) {
         $tr .= "<td><a href='?published={$post_id}' style='padding:10px'>&#x1F44D</a><a href='?draft={$post_id}' style='padding:10px'>&#x1F44E</a></td>";
         $tr .= "<td><img src='../media/posts_images/{$post_image}' style='max-width: 100px' alt=''></td>";
         $tr .= "<td>{$post_tags}</td>";
-        $tr .= "<td>{$post_comment_count}</td>";
+
+
+        $query = "SELECT * FROM comments WHERE comment_post_id = $post_id";
+        $send_comment_query = mysqli_query($connection, $query);
+
+        $row = mysqli_fetch_array($send_comment_query);
+        $comment_id = $row['comment_id'];
+
+        $count_comments =  mysqli_num_rows($send_comment_query);
+//        $tr .= "<td>{$post_comment_count}</td>";
+        $tr .= "<td><a href='comments.php?comment_post_id=$post_id'>$count_comments</a></td>";
+
+
         $tr .= "<td>{$post_date}</td>";
         $tr .= "<td>{$post_views_count}</td>";
         $tr .= "<td><a href='../?p_id={$post_id}'>preview</a></td>";

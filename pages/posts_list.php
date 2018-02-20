@@ -18,9 +18,28 @@ if(isset($_POST['submit'])){
 
 } else {
 
-    $query = "SELECT * FROM posts WHERE post_status = 'published' ";
-    $select_posts_query = mysqli_query($connection, $query);
+    $post_query_count = "SELECT * FROM posts";
+    $find_count = mysqli_query($connection, $post_query_count);
+    $count = mysqli_num_rows($find_count);
 
+    $posts_on_page = 5;
+    $count = ceil($count / $posts_on_page);
+
+    if(isset($_GET['page'])){
+        $page = $_GET['page'];
+
+    } else {
+      $page = "";
+    }
+
+    if($page == "" || $page == 1 ) {
+        $page_1 = 0;
+    } else {
+        $page_1 = ($page * $posts_on_page) - $posts_on_page;
+    }
+
+    $query = "SELECT * FROM posts WHERE post_status = 'published' LIMIT $page_1, $posts_on_page";
+    $select_posts_query = mysqli_query($connection, $query);
 }
 
 $i = 0;
@@ -78,8 +97,14 @@ $json_posts = json_encode($posts);
 <!--end posts-->
 <!--psgination-->
 <nav aria-label="Pagination" class="padding-top-1">
-    <ul class="pagination text-center">
+    <ul class="pagination text-center" style="display: flex; align-items: center;">
         <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+
+        <?php
+            for ($i = 1; $i <= $count; $i++) {
+                echo "<li id='page_$i' style='margin: 0 2px'><a href='?page=$i'>$i</a></li>";
+            }
+        ?>
 
         <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
     </ul>

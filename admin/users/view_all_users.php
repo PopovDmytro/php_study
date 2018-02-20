@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function get_all_users($connection) {
     $query = "SELECT * FROM users ";
     $select_users = mysqli_query($connection, $query);
@@ -48,11 +50,17 @@ function get_all_users($connection) {
 //delete post
 if(isset($_GET['delete_user'])) {
 
-    $the_user_id = $_GET['delete_user'];
-    $query = "DELETE FROM users WHERE user_id = {$the_user_id} ";
-    $delete_user_query = mysqli_query($connection, $query);
+    if(isset($_SESSION['user_role'])){
 
-    confirm($delete_user_query);
+        if($_SESSION['user_role'] === 'admin') {
+
+            $the_user_id = $_GET['delete_user'];
+            $query = "DELETE FROM users WHERE user_id = {$the_user_id} ";
+            $delete_user_query = mysqli_query($connection, $query);
+
+            confirm($delete_user_query);
+        }
+    }
 }
 //change status status approved/ unapproved
 if(isset($_GET['change_to_subscriber'])) {
