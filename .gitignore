@@ -44,3 +44,6 @@ testem.log
 Thumbs.db
 
 # custom dir and files
+/vendor/*
+!/vendor/ishop
+
